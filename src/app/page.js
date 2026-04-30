@@ -89,8 +89,8 @@ export default function Home() {
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', gap: '3rem', width: '100%' }}>
           
-          {/* Text */}
-          <div style={{ flex: 1 }}>
+          {/* Text centered */}
+          <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <span style={{
               background: '#e0e7ff', color: '#6366f1',
               padding: '0.5rem 1.25rem', borderRadius: '50px',
@@ -106,11 +106,11 @@ export default function Home() {
               <span style={{ color: '#6366f1' }}>Mahasiswa.</span>
             </h1>
 
-            <p style={{ fontSize: '1.25rem', color: '#64748b', marginBottom: '2.5rem', maxWidth: '560px', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '1.25rem', color: '#64748b', marginBottom: '2.5rem', maxWidth: '700px', lineHeight: 1.7 }}>
               Jual dan beli produk kreatif antar mahasiswa dengan mudah, aman, dan menyenangkan. Bangun ekonomi kampusmu sekarang!
             </p>
 
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Link href="/register" style={{
                 background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
                 color: 'white', fontWeight: 700, fontSize: '1rem',
@@ -132,8 +132,8 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Stats */}
-            <div style={{ display: 'flex', gap: '2.5rem', marginTop: '3.5rem' }}>
+            {/* Stats centered */}
+            <div style={{ display: 'flex', gap: '2.5rem', marginTop: '3.5rem', justifyContent: 'center' }}>
               {[
                 { value: '500+', label: 'Produk' },
                 { value: '200+', label: 'Penjual' },
@@ -145,30 +145,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Image */}
-          <div style={{ flex: '0 0 420px', position: 'relative', display: 'flex', justifyContent: 'center' }}>
-            <div style={{
-              width: '100%', height: 420,
-              background: 'linear-gradient(135deg, #c7d2fe, #818cf8)',
-              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-              opacity: 0.2,
-              position: 'absolute', top: -20, right: -20
-            }} />
-            <Image
-              src="/hero.png"
-              alt="Students marketplace"
-              width={500}
-              height={450}
-              unoptimized
-              style={{
-                width: '100%', height: 450,
-                objectFit: 'cover', borderRadius: 24,
-                boxShadow: '0 24px 60px -12px rgba(0,0,0,0.2)',
-                position: 'relative', zIndex: 2
-              }}
-            />
           </div>
         </div>
       </section>
